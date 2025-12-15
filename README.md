@@ -7,9 +7,10 @@ ideally, easy to add functionality dynamically (not too much code required to do
 
 ## food for thought
 
-since the state is raw js objects, you can do all the magic you want with it. 
-- e.g., if you're using it on the frontend, pass in a vue `reactive` and then you have global state and reactivity across the whole frontend!
+since the state is raw js objects, you can do all the magic you want with it.  
+- e.g., if you're using it on the frontend, pass in a vue `reactive` and then you have global state and reactivity across the whole frontend! (actually you could do this anywhere with `@vue/reactivity`)
 - since everything except the builder functions is raw js, add human in the loop and other things very trivially using your own state!
+
 ## spec 
 
 stateful agent loops
