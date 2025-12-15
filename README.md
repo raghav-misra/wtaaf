@@ -3,9 +3,16 @@ what the! another agent framework?
 
 agent frameworks are too extra this one is simpler i hope
 
+ideally, easy to add functionality dynamically (not too much code required to do anything beyond min required JS). easy to hook	into lifecycle to introduce edge case handling and dynamic observability
+
+## food for thought
+
+since the state is raw js objects, you can do all the magic you want with it. 
+- e.g., if you're using it on the frontend, pass in a vue `reactive` and then you have global state and reactivity across the whole frontend!
+- since everything except the builder functions is raw js, add human in the loop and other things very trivially using your own state!
 ## spec 
 
-Agent loops as state machines
+stateful agent loops
 
 ```typescript
 import { agent, toolset, run } from "wtaf";
