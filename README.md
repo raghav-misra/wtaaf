@@ -18,10 +18,12 @@ stateful agent loops
 ```typescript
 import { agent, toolset, run } from "wtaf";
 
-const researchAgent = agent("gemini-3.0-preview", /*...*/);
+const researchAgent = agent`research`("gemini-3.0-preview", /*...*/)
+	.tool(/*...*/)
+	.output(ResearchAgentSchema);
 
 // very declarative and expressive syntax to build an agent
-const codingAgent = agent("gpt-5.2", () => ({
+const codingAgent = agent`coding`("gpt-5.2", () => ({
 	goalDefined: false,
 	goalCompleted: false,
 	goal: null as string | null,
